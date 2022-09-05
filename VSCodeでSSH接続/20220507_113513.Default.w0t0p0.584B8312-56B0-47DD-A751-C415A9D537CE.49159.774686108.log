@@ -1,0 +1,104 @@
+Last login: Sat May  7 11:07:54 on ttys000
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 ~ % ccdc  lls
+ApplicationsDocumentsLibraryMusicPublic
+DesktopDownloadsMoviesPictures
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 ~ % d ccd documents
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 documents % lls
+Cheat sheet
+GW
+Icon?
+development
+money
+旧OneDrive
+小型金属.docx
+粗大ゴミ.docx
+ヤマトヨ産業
+本人確認書類
+さかいウェブネット
+システム設定データ
+レターパックライト_切貼.xlsx
+レターパックライト_枠無し.xlsx
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 documents % ccd lscd システム設定データ/ 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 システム設定データ % lls
+20211231-1603_RX-600MI.config
+BBexcite.txt
+BunBackup
+CORESERVER-Office365_sakaiwebnet.com.csv
+FreebieAC_download.txt
+HikariTV.pdf
+MFC-J6583CDW.jpg
+MT5
+Microsoftアカウント.pdf
+NTT-W_NEXT-hayabusa.pdf
+Plala.pdf
+RTX1100
+RX-600MI-RTX1100route.jpg
+Teraterm
+Tool
+Tool.zip
+roboform_v6error.txt
+rp0wh-01
+rp3b-01
+rsa
+setupproplusretail.x86.ja-jp_act_1_.zip
+固定IP端末.txt
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 システム設定データ % ccd rsa/ 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % sscp id_rsa.pub  pi/ @192.168.2.211
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % lls
+id_rsa
+id_rsa.pub
+pi@192.168.2.211
+パスフレーズについて.txt
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % lsscp id_rsa.pub pi@192.168.2.211
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % sscp
+usage: scp [-346ABCpqrTv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-J destination] [-l limit] [-o ssh_option] [-P port]
+           [-S program] source ... target
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % sscp rs   id_rsa.pub pi@192.168.2.211ls                             scp id_rsa.pub pi@192.168.2.211                           s ssh pi@192.168.2.211
+pi@192.168.2.211's password: 
+Linux rp3b-01 5.10.63-v7+ #1496 SMP Wed Dec 1 15:58:11 GMT 2021 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sat May  7 11:23:01 2022 from 192.168.1.15
+pi@rp3b-01:~ $ exit
+ログアウト
+Connection to 192.168.2.211 closed.
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % lls
+id_rsa
+id_rsa.pub
+パスフレーズについて.txt
+                                                   kazuyoshimatsuoka@MacBookPro31421103 rsa % ssc
+sc_auth          scandeps5.30.pl  screen           scutil
+sc_usage         sched            screencapture    
+scandeps.pl      schemagen        script           
+scandeps5.18.pl  scp              scselect         scscp   p -P 22 r  id_rsa.pub pi@192.168.2.211 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % scp -P 22 id_rsa.pub pi@192.168.2.211          p pi@192.168.2.211i pi@192.168.2.211@ pi@192.168.2.2111 pi@192.168.2.2119 pi@192.168.2.2112 pi@192.168.2.211. pi@192.168.2.2111 pi@192.168.2.2116 pi@192.168.2.2118 pi@192.168.2.211 . pi@192.168.2.212 pi@192.168.2.211. pi@192.168.2.2112 pi@192.168.2.2111 pi@192.168.2.2111 pi@192.168.2.211
+cp: pi@192.168.2.211 and pi@192.168.2.211 are identical (not copied).
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % scp -P 22 pi@192.168.2.211 pi@192.168.2.211:.ssh
+pi@192.168.2.211's password: 
+pi@192.168.2.211                                0%    0     0.0KB/s   --:-- ETApi@192.168.2.211                              100%  408    60.3KB/s   00:00    
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 rsa % ccd /
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 / % lls
+AppleInternalUsersdevprivatevar
+ApplicationsVolumesetcsbin
+Librarybinhometmp
+Systemcoresoptusr
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 / % ccd Users/ 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 /Users % lls
+Sharedkazuyoshimatsuoka
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 /Users % ccd kazuyoshimatsuoka/ 
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 ~ % lls
+ApplicationsDocumentsLibraryMusicPublic
+DesktopDownloadsMoviesPictures
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 ~ % ccd .ssh
+%                                                                                kazuyoshimatsuoka@MacBookPro31421103 .ssh % eexit

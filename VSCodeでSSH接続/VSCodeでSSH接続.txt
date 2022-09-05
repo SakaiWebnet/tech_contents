@@ -1,0 +1,24 @@
+＊接続環境
+リモートマシン:Raspberry Pi 3B(以下rp3b)
+ローカルPC:MacBookPro(Mac OS Monterey)(以下mac)
+
+
+*rp3b/macそれぞれに.sshディレクトリの作成
+rp3b
+    /home/任意のuser/.ssh
+mac
+    /User/任意のuser/.ssh
+
+*鍵の作成
+macのターミナルを用いて、.sshディレクトリ内に公開鍵と秘密鍵を作成する。
+.ssh/
+
+
+
+
+Remote Developmentのインストール
+
+
+
+
+＊SDカードでcloneバックアップしたところssh-agentで鍵の登録がなくなっていた。
