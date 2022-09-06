@@ -110,6 +110,9 @@ git push -u origin main                                                     ;mai
 &nbsp;
 
 # VS Codeにてコミット→GitHubへプッシュする
-1. まずはローカルリポジトリにてステージング→コミットを行う。
+- ローカルリポジトリにてステージング→コミット&プッシュを行う。
     1. 左サイドメニューの'Source Control'ボタンを押下
     2. 'Change'内にある内容変更されたファイルがあるので、右端の'+'をクリックしてステージングを行う。
+    3. そのファイルが'Staged Changes'に移行するので、’✔️Commit’ボタンの上にあるMessage欄に任意のコメントを入力する(ex.yyyymmddhhmm)。
+    4. ’✔️Commit’ボタンプルダウンメニュー内の'Commit&Push'をクリックする。
+- GitHubにて更新されているか確認する。
