@@ -191,110 +191,31 @@ HGW(NTT/RX-600MI)内の「電話設定」-「内線設定」-[内線番号一覧
 ## 
 &nbsp;  
 
-# 録音されたメッセージファイルをメール送信するためのssmtp mailutilsのインストール
-root@rp3b-01:/etc/asterisk# apt-get install ssmtp mailutils
-パッケージリストを読み込んでいます... 完了
-依存関係ツリーを作成しています                
-状態情報を読み取っています... 完了
-以下の追加パッケージがインストールされます:
-  guile-2.2-libs libgc1c2 libgnutls-openssl27 libgsasl7 libkyotocabinet16v5 liblzo2-2 libmailutils5 libntlm0
-  mailutils-common
-提案パッケージ:
-  mailutils-mh mailutils-doc
-以下のパッケージは「削除」されます:
-  postfix
-以下のパッケージが新たにインストールされます:
-  guile-2.2-libs libgc1c2 libgnutls-openssl27 libgsasl7 libkyotocabinet16v5 liblzo2-2 libmailutils5 libntlm0 mailutils
-  mailutils-common ssmtp
-アップグレード: 0 個、新規インストール: 11 個、削除: 1 個、保留: 0 個。
-8,109 kB のアーカイブを取得する必要があります。
-この操作後に追加で 45.0 MB のディスク容量が消費されます。
-続行しますか? [Y/n] Y
-取得:1 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf libgc1c2 armhf 1:7.6.4-0.4 [212 kB]
-取得:2 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf guile-2.2-libs armhf 2.2.4+1-2+deb10u1 [4,918 kB]
-取得:3 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf libgnutls-openssl27 armhf 3.6.7-4+deb10u7 [315 kB]
-取得:4 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf libntlm0 armhf 1.5-1+deb10u1 [21.6 kB]
-取得:5 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf libgsasl7 armhf 1.8.0-8+b1 [196 kB]
-取得:6 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf liblzo2-2 armhf 2.10-0.1 [48.4 kB]
-取得:7 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf libkyotocabinet16v5 armhf 1.2.76-4.2+rpi1 [280 kB]
-取得:8 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf mailutils-common all 1:3.5-4 [689 kB]
-取得:9 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf libmailutils5 armhf 1:3.5-4 [809 kB]
-取得:10 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf mailutils armhf 1:3.5-4 [566 kB]          
-取得:11 http://ftp.tsukuba.wide.ad.jp/Linux/raspbian/raspbian buster/main armhf ssmtp armhf 2.64-8 [54.2 kB]              
-8,109 kB を 7秒 で取得しました (1,215 kB/s)                                                                               
-パッケージを事前設定しています ...
-(データベースを読み込んでいます ... 現在 49646 個のファイルとディレクトリがインストールされています。)
-postfix (3.4.14-0+deb10u1) を削除しています ...
-以前に未選択のパッケージ libgc1c2:armhf を選択しています。
-(データベースを読み込んでいます ... 現在 49471 個のファイルとディレクトリがインストールされています。)
-.../00-libgc1c2_1%3a7.6.4-0.4_armhf.deb を展開する準備をしています ...
-libgc1c2:armhf (1:7.6.4-0.4) を展開しています...
-以前に未選択のパッケージ guile-2.2-libs:armhf を選択しています。
-.../01-guile-2.2-libs_2.2.4+1-2+deb10u1_armhf.deb を展開する準備をしています ...
-guile-2.2-libs:armhf (2.2.4+1-2+deb10u1) を展開しています...
-以前に未選択のパッケージ libgnutls-openssl27:armhf を選択しています。
-.../02-libgnutls-openssl27_3.6.7-4+deb10u7_armhf.deb を展開する準備をしています ...
-libgnutls-openssl27:armhf (3.6.7-4+deb10u7) を展開しています...
-以前に未選択のパッケージ libntlm0:armhf を選択しています。
-.../03-libntlm0_1.5-1+deb10u1_armhf.deb を展開する準備をしています ...
-libntlm0:armhf (1.5-1+deb10u1) を展開しています...
-以前に未選択のパッケージ libgsasl7 を選択しています。
-.../04-libgsasl7_1.8.0-8+b1_armhf.deb を展開する準備をしています ...
-libgsasl7 (1.8.0-8+b1) を展開しています...
-以前に未選択のパッケージ liblzo2-2:armhf を選択しています。
-.../05-liblzo2-2_2.10-0.1_armhf.deb を展開する準備をしています ...
-liblzo2-2:armhf (2.10-0.1) を展開しています...
-以前に未選択のパッケージ libkyotocabinet16v5:armhf を選択しています。
-.../06-libkyotocabinet16v5_1.2.76-4.2+rpi1_armhf.deb を展開する準備をしています ...
-libkyotocabinet16v5:armhf (1.2.76-4.2+rpi1) を展開しています...
-以前に未選択のパッケージ mailutils-common を選択しています。
-.../07-mailutils-common_1%3a3.5-4_all.deb を展開する準備をしています ...
-mailutils-common (1:3.5-4) を展開しています...
-以前に未選択のパッケージ libmailutils5:armhf を選択しています。
-.../08-libmailutils5_1%3a3.5-4_armhf.deb を展開する準備をしています ...
-libmailutils5:armhf (1:3.5-4) を展開しています...
-以前に未選択のパッケージ mailutils を選択しています。
-.../09-mailutils_1%3a3.5-4_armhf.deb を展開する準備をしています ...
-mailutils (1:3.5-4) を展開しています...
-以前に未選択のパッケージ ssmtp を選択しています。
-.../10-ssmtp_2.64-8_armhf.deb を展開する準備をしています ...
-ssmtp (2.64-8) を展開しています...
-libgnutls-openssl27:armhf (3.6.7-4+deb10u7) を設定しています ...
-libgc1c2:armhf (1:7.6.4-0.4) を設定しています ...
-ssmtp (2.64-8) を設定しています ...
-liblzo2-2:armhf (2.10-0.1) を設定しています ...
-libntlm0:armhf (1.5-1+deb10u1) を設定しています ...
-mailutils-common (1:3.5-4) を設定しています ...
-guile-2.2-libs:armhf (2.2.4+1-2+deb10u1) を設定しています ...
-libkyotocabinet16v5:armhf (1.2.76-4.2+rpi1) を設定しています ...
-libgsasl7 (1.8.0-8+b1) を設定しています ...
-libmailutils5:armhf (1:3.5-4) を設定しています ...
-mailutils (1:3.5-4) を設定しています ...
-update-alternatives: /usr/bin/frm (frm) を提供するために自動モードで /usr/bin/frm.mailutils を使います
-update-alternatives: /usr/bin/from (from) を提供するために自動モードで /usr/bin/from.mailutils を使います
-update-alternatives: /usr/bin/messages (messages) を提供するために自動モードで /usr/bin/messages.mailutils を使います
-update-alternatives: /usr/bin/movemail (movemail) を提供するために自動モードで /usr/bin/movemail.mailutils を使います
-update-alternatives: /usr/bin/readmsg (readmsg) を提供するために自動モードで /usr/bin/readmsg.mailutils を使います
-update-alternatives: /usr/bin/dotlock (dotlock) を提供するために自動モードで /usr/bin/dotlock.mailutils を使います
-update-alternatives: /usr/bin/mailx (mailx) を提供するために自動モードで /usr/bin/mail.mailutils を使います
-man-db (2.8.5-2) のトリガを処理しています ...
-libc-bin (2.28-10+rpt2+rpi1) のトリガを処理しています ...
-root@rp3b-01:/etc/asterisk#
-
-
-
-#ssmtp.confファイルのバックアップ&VScodeで編集するための所有者変更とVScodeでファイル編集
-root@rp3b-01:/etc/ssmtp# ls
-revaliases  ssmtp.conf
-root@rp3b-01:/etc/ssmtp# cp ssmtp.conf ssmtp.conf.bak
-root@rp3b-01:/etc/ssmtp# chown pi ssmtp.conf
-pi@rp3b-01:/etc/ssmtp $ ls -l
-合計 12
--rw-r--r-- 1 root root 200  7月 20  2014 revaliases
--rw-r--r-- 1 pi   root 707  1月  9 11:01 ssmtp.conf
--rw-r--r-- 1 root root 578  1月  5 10:28 ssmtp.conf.bak
-
-##ssmtp.confを編集する(全削除して以下の通りだけにする)
+# 録音されたメッセージファイルをメール送信するためのssmtp mailutilsの設定
+## raspiのcloneバックアップ
+```
+lsblk
+sudo rpi-clone sda -f
+```
+## ssmtp mailutilsのインストール
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install ssmtp mailutils
+```
+## ssmtp.confファイルのバックアップ&所有者変更&ファイル編集
+```
+cd /etc/ssmtp
+cp ssmtp.conf ssmtp.conf.bak
+sudo pi ssmtp.conf
+ls -l
+  合計 12
+  -rw-r--r-- 1 root root 200  7月 20  2014 revaliases
+  -rw-r--r-- 1 pi   root 707  1月  9 11:01 ssmtp.conf
+  -rw-r--r-- 1 root root 578  1月  5 10:28 ssmtp.conf.bak
+```
+ssmtp.confの中身を全削除して以下の通りだけにする。
+```
 root=kmtok@violet.plala.or.jp       ;メールアドレス（例えば、abcdefgh@gmail.com など）
 Mailhub=secure.plala.or.jp:587      ;送信用ドメインのアドレス/ポート
 AuthUser=kmtok@violet.plala.or.jp   ;メールアカウント
@@ -303,34 +224,32 @@ AuthMethod=LOGIN
 UseSTARTTLS=Yes                     ;メールサーバーの仕様に基づいて設定
 UseTLS=Yes                          ;メールサーバーの仕様に基づいて設定
 hostname=secure.plala.or.jp         ;メールサーバー名(‘localhost’ では hylafax で DNS エラーになる)
+```
+メール送信テスト
+```
+mail guest@sakaiwebnet.com          ;任意のメール送信先を入力してEnter
+Cc:                                 ;Enter
+Subject: test                       ;任意のタイトルを入力してEnter
+test                                ;任意の本文を入力
+キーボードのCtrl+Dで送信操作。
+メールが届いたかを確認する。
+```
+所有者を戻す
+`sudo chown root ssmtp.conf`
+所有者が元に戻ったか確認する
+```
+ls -l
+  合計 12
+  -rw-r--r-- 1 root root 200  7月 20  2014 revaliases
+  -rw-r--r-- 1 root root 707  1月  9 11:01 ssmtp.conf
+  -rw-r--r-- 1 root root 578  1月  5 10:28 ssmtp.conf.bak
+```
+##
+&nbsp;  
 
-##メール送信テスト
-root@rp3b-01:~# mail guest@sakaiwebnet.com
-Cc: 
-Subject: test
-test
-###Ctrl+Dで送信
-root@rp3b-01:~#
-###メールが届いたかを確認する。
-
-##所有者を戻す
-root@rp3b-01:/etc/ssmtp# chown root ssmtp.conf
-＃#所有者が元に戻ったか確認する
-root@rp3b-01:/etc/ssmtp# ls -l
-合計 12
--rw-r--r-- 1 root root 200  7月 20  2014 revaliases
--rw-r--r-- 1 root root 707  1月  9 11:01 ssmtp.conf
--rw-r--r-- 1 root root 578  1月  5 10:28 ssmtp.conf.bak
-
-
-
-#asterisk.confの内容を一部編集する(内容を全削除しないこと)
-languageprefix = yes
-defaultlanguage = ja
-
-
-
-#voicemail.confの編集(内容を全削除して以下のみにする)
+# 留守電の設定
+## /etc/asterisk/voicemail.confの編集(内容を全削除して以下のみにする)
+```
 [general]
 format=wav49                            ;wav形式で録音
 serveremail=SWN_rp3b-01_asterisk        ;メール送信者名
@@ -354,53 +273,41 @@ japan=Japan|Q PHM `jp-ni' `vm-received'
 
 [default]
 500 => 1111,SWN,kazuyoshi.matsuoka@sakaiwebnet.com,,tz=japan    ;ボックス => メッセージを再生するときのパスワード,送信先名前,送信先メールアドレス,,タイムゾーン
-
-
-
-#extensions.confファイルをVScodeで編集(全削除して下記のみ記述する)
+```
+## /etc/asterisk/extensions.confファイルをVScodeで編集(全削除して下記のみ記述する)
+```
 [general]
 static=yes
 writeprotect=no
 
 [globals]
-MYNUMBER=0722884159
-USEVOICEMAIL=YES
+MYNUMBER=0722884159                   ;電話番号
+USEVOICEMAIL=YES                      ;留守電有効化
 
-[default]
-exten => 200,1,Ringing
-exten => 200,n,Wait(3)
-exten => 200,n,Voicemail(500)
-exten => 200,n,Wait(1)
-exten => 200,n,Hangup()
+[default]                             ;着信した時の挙動を上から順番に設定
+exten => 200,1,Ringing                ;着信
+exten => 200,n,Wait(3)                ;3秒間呼び出し
+exten => 200,n,Voicemail(500)         ;留守電スタート
+exten => 200,n,Wait(1)                ;相手が切った後1秒間ポーズ
+exten => 200,n,Hangup()               ;切断
+```
 
 
-
-#音声日本語化
-##あらかじめ作成されている音声ファイルを利用
-root@rp3b-01:~# cd /usr/share/asterisk/sounds       ;asterisk.confでastdatadirの場所を確認しておく
-root@rp3b-01:/usr/share/asterisk/sounds# wget https://voip-info.jp/downloads/asterisk/sounds/1_6/asterisk-sound-jp_16_pre.tar.gz
---2022-01-14 16:29:53--  https://voip-info.jp/downloads/asterisk/sounds/1_6/asterisk-sound-jp_16_pre.tar.gz
-voip-info.jp (voip-info.jp) をDNSに問いあわせています... 140.227.82.19
-voip-info.jp (voip-info.jp)|140.227.82.19|:443 に接続しています... 接続しました。
-HTTP による接続要求を送信しました、応答を待っています... 200 OK
-長さ: 945968 (924K) [application/x-gzip]
-`asterisk-sound-jp_16_pre.tar.gz' に保存中
-
-asterisk-sound-jp_16_pre.tar.gz   100%[===========================================================>] 923.80K  4.89MB/s 時間 0.2s     
-
-2022-01-14 16:29:54 (4.89 MB/s) - `asterisk-sound-jp_16_pre.tar.gz' へ保存完了 [945968/945968]
-
-root@rp3b-01:/usr/share/asterisk/sounds# ls
-asterisk-sound-jp_16_pre.tar.gz  custom  en  en_US  en_US_f_Allison  priv-callerintros  recordings
-root@rp3b-01:/usr/share/asterisk/sounds# tar xzvf asterisk-sound-jp_16_pre.tar.gz
-root@rp3b-01:/usr/share/asterisk/sounds# ls
-asterisk-sound-jp_16_pre.tar.gz  custom  en  en_US  en_US_f_Allison  priv-callerintros  recordings
-root@rp3b-01:/usr/share/asterisk/sounds# rm asterisk-sound-jp_16_pre.tar.gz 
-root@rp3b-01:/usr/share/asterisk/sounds# ls
-custom  en  en_US  en_US_f_Allison  ja  priv-callerintros  recordings
-root@rp3b-01:/usr/share/asterisk/sounds#
-
-##TTSの利用
+# 応答音声日本語化
+## あらかじめ作成されている音声ファイル(英語)を利用
+```
+cd /usr/share/asterisk/sounds                                                                 ;asterisk.conf内のastdatadirの場所
+wget https://voip-info.jp/downloads/asterisk/sounds/1_6/asterisk-sound-jp_16_pre.tar.gz       ;日本語音声ファイルのダウンロード
+ls /usr/share/asterisk/sounds                                                                 ;ダウンロード完了の確認
+  asterisk-sound-jp_16_pre.tar.gz  custom  en  en_US  en_US_f_Allison  priv-callerintros  recordings
+tar xzvf /usr/share/asterisk/sounds/asterisk-sound-jp_16_pre.tar.gz                           ;解凍
+ls /usr/share/asterisk/sounds                                                                 ;解凍完了の確認(jaディレクトリがそれ)
+  asterisk-sound-jp_16_pre.tar.gz  custom  en  en_US  en_US_f_Allison  ja  priv-callerintros  recordings
+rm /usr/share/asterisk/sounds/asterisk-sound-jp_16_pre.tar.gz                                 ;ダウンロードファイルの削除
+ls /usr/share/asterisk/sounds                                                                 ;再度ディレクトリ内の確認
+  custom  en  en_US  en_US_f_Allison  ja  priv-callerintros  recordings
+```
+## TTSの利用
 ###Google TTS
 ####asterisk.confでagiディレクトリの確認
 astagidir => /usr/share/asterisk/agi-bin

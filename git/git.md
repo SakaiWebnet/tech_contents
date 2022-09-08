@@ -3,7 +3,7 @@
 [【Mac】Gitの環境構築をしよう！ | プログラミングの入門なら基礎から学べるProgate[プロゲート]](https://prog-8.com/docs/git-env)  
 [Gitの設定をgit configで確認・変更 | note.nkmk.me](https://note.nkmk.me/git-config-setting/)  
 [VSCodeでGitソース管理時におすすめのプラグイン3選！ | コードライク](https://codelikes.com/vscode-git-plugin/#toc10)  
-[VSCodeでGit・GitHubを使う方法を解説する【初心者向き】](https://miya-system-works.com/blog/detail/vscode-github/)
+[VSCodeでGit・GitHubを使う方法を解説する【初心者向き】](https://miya-system-works.com/blog/detail/vscode-github/)  
 ##
 &nbsp;
 
