@@ -24,13 +24,13 @@ Raspberry Pi 3 Model B(以下、RP3b)
 >
 [バイク野郎のひとりごと: Raspberry Pi 3へAsteriskを構築する -- その１](https://bike8615.blogspot.com/2017/06/raspberry-pi-3asterisk-1.html)  
 [簡易インストールマニュアル - VoIP-Info.jp](https://voip-info.jp/index.php/%E7%B0%A1%E6%98%93%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB#.E6.97.A5.E6.9C.AC.E8.AA.9E.E9.9F.B3.E5.A3.B0.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E3.82.A4.E3.83.B3.E3.82.B9.E3.83.88.E3.83.BC.E3.83.AB_2)  
+[Text to speech using Google Translate for Asterisk PBX](http://zaf.github.io/asterisk-googletts/)
 [majishini - Asteriskで050 Freeに留守電を付ける](https://www.majishini.net/hg/post/2014/20141115-001/)  
 [バイク野郎のひとりごと: Asterisk の再セットアップ -- googletts.agi を使ってみる](https://bike8615.blogspot.com/2017/11/asterisk-googlettsagi.html)  
 [asterisk14.0.2 freepbx13 extensionで日本語を喋らせる | なんでもDIY](http://www.ckenko25.jp/2018/12/post-12311)  
 [Asteriskで留守電作ったメモ | Nacky – Snowland.net](https://snowland.net/wp/2018/03/20/asterisk-voicemail/)  
 [Asterisk13の音声案内を日本語にする | ぱぴぃの、人生これから](https://mrhiroshi2010.wordpress.com/2018/03/21/asterisk13%E3%81%AE%E9%9F%B3%E5%A3%B0%E6%A1%88%E5%86%85%E3%82%92%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%AB%E3%81%99%E3%82%8B/)  
 [Google TTSを利用してAsteriskのIVRで日本語読み上げ - がとらぼ](https://gato.intaa.net/archives/7095)  
-
 &nbsp;  
 ##
 
@@ -307,65 +307,63 @@ rm /usr/share/asterisk/sounds/asterisk-sound-jp_16_pre.tar.gz                   
 ls /usr/share/asterisk/sounds                                                                 ;再度ディレクトリ内の確認
   custom  en  en_US  en_US_f_Allison  ja  priv-callerintros  recordings
 ```
-## TTSの利用
-###Google TTS
-####asterisk.confでagiディレクトリの確認
-astagidir => /usr/share/asterisk/agi-bin
-
-####Text to speech using Google Translate for Asterisk PBXのインストール
-#####公式サイト: http://zaf.github.io/asterisk-googletts/
-root@rp3b-01:/usr/share/asterisk/agi-bin# cd /var/lib/asterisk/agi-bin/       ;agi-binディレクトリがない場合は新規作成する。
-root@rp3b-01:/usr/share/asterisk/agi-bin# git clone https://github.com/zaf/asterisk-googletts.git
-Cloning into 'asterisk-googletts'...
-remote: Enumerating objects: 546, done.
-remote: Total 546 (delta 0), reused 0 (delta 0), pack-reused 546
-Receiving objects: 100% (546/546), 165.59 KiB | 2.33 MiB/s, done.
-Resolving deltas: 100% (292/292), done.
-root@rp3b-01:/usr/share/asterisk/agi-bin# 
-root@rp3b-01:/usr/share/asterisk/agi-bin# cd asterisk-googletts
-root@rp3b-01:/usr/share/asterisk/agi-bin/asterisk-googletts# cp -a googletts.agi ..
-root@rp3b-01:/usr/share/asterisk/agi-bin/asterisk-googletts# cd ..
-root@rp3b-01:/usr/share/asterisk/agi-bin/# chmod 755 googletts.agi
-
-####Text to speech using Google Translate for Asterisk PBXが依存するソフトのインストール
-root@rp3b-01:/usr/share/asterisk/agi-bin/# apt-get update
-root@rp3b-01:/usr/share/asterisk/agi-bin/# apt-get install libwww-perl libcrypt-ssleay-perl sox mpg123
-
-####動作テストのためのextensions.confの編集
-他の設定はコメントアウトしておく
+## Google TTSの利用
+### Text to speech using Google Translate for Asterisk PBXのダウンロード
+```
+cd /usr/share/asterisk/agi-bin                                  ;asterisk.conf内のastagidirの場所
+cd /var/lib/asterisk/agi-bin/                                   ;agi-binディレクトリに移動。がない場合は新規作成する。
+git clone https://github.com/zaf/asterisk-googletts.git         ;Text to speech using Google Translate for Asterisk PBXのダウンロード。
+cd asterisk-googletts                                           ;asterisk-googlettsディレクトリに移動。
+cp -a googletts.agi ..                                          ;asterisk-googletts内にあるgoogletts.agiをagi-binディレクトリにコピー。
+cd ..                                                           ;一つ上のディレクトリagi-binに移動。
+sudo chmod 755 googletts.agi                                    ;実行権限付与。
+```
+### Text to speech using Google Translate for Asterisk PBXが依存するソフトのインストール
+```
+sudo apt-get update
+sudo apt-get install libwww-perl libcrypt-ssleay-perl sox mpg123
+```
+### 動作テストのためのextensions.confの編集
+他の設定はコメントアウトしておく。
+```
 [default]
+```
 exten => 200,1,Answer()
 exten => 200,n,Wait(2)
 exten => 200,n,agi(googletts.agi,"これはテストです",ja)
 exten => 200,n,Wait(2)
 exten => 200,n,Hangup()
-root@rp3b-01:/usr/share/asterisk/agi-bin/# service asterisk restart
+'''
+`sudo service asterisk restart`
 架電して「これはテストです」と応答すればOK
-
-####本番稼働のためのextensions.confの編集
+### 本番稼働のためのextensions.confの編集
 前項のテスト用設定はコメントアウト or 削除しておく
+```
 [default]
 ;#Google TTS(変更後は"service asterisk restart"を忘れずに!)
 exten => 200,1,Ringing
 exten => 200,n,Wait(3)
-exten => 200,n,agi(googletts.agi,"はい、さかいウェブネットです。お電話ありがとうございます。 恐れ入りますが、2022年より、留守電に吹き込まれた内容をもとに、090の番号で始まる携帯電話にて折り返しのご連絡をさせていただく対応となりました。 なお当方のホームページ、さかいウェブネットドットコム内のお問い合わせからもご用件を送信いただけます。 今からメッセージを吹き込んでいただく際は、プーーっと発信音の後に、3分以内でご用件と折り返し先電話番号を仰ってください。 またこちらには、かけていただいている電話番号は表示されていませんので、必ず折り返し先電話番号を吹き込んでいただきますようお願いいたします。 こちらからは090で始まる番号で掛けさせていただきますのでよろしくお願いします。",ja,,1.4)        ;agi(googletts.agi,"応答メッセージ(区切りのいいとことで半角スペースを入れないと全文読み上げない)",言語の種類(設定値は公式サイトのREADME.txtを参照),IVR(任意),読み上げ速度)
+exten => 200,n,agi(googletts.agi,"はい、さかいウェブネットです。お電話ありがとうございます。 恐れ入りますが、2022年より、留守電に吹き込まれた内容をもとに、090の番号で始まる携帯電話にて折り返しのご連絡をさせていただく対応となりました。 なお当方のホームページ、さかいウェブネットドットコム内のお問い合わせからもご用件を送信いただけます。 今からメッセージを吹き込んでいただく際は、プーーっと発信音の後に、3分以内でご用件と折り返し先電話番号を仰ってください。 またこちらには、かけていただいている電話番号は表示されていませんので、必ず折り返し先電話番号を吹き込んでいただきますようお願いいたします。 こちらからは090で始まる番号で掛けさせていただきますのでよろしくお願いします。",ja,,1.4)
 exten => 200,n,Voicemail(500)
 exten => 200,n,Wait(1)
 exten => 200,n,Hangup()
-root@rp3b-01:/usr/share/asterisk/agi-bin/# service asterisk restart
+```
+agi(googletts.agi,"応答メッセージ(区切りのいいとことで半角スペースを入れないと全文読み上げない)",言語の種類(設定値は公式サイトのREADME.txtを参照),IVR(任意),読み上げ速度)  
+`sudo service asterisk restart`
+##
+&nbsp;  
 
+# 設定ファイルの所有者を戻す
+```
+sudo chown asterisk /etc/asterisk/asterisk.conf
+sudo chown asterisk /etc/asterisk/extensions.conf
+sudo chown asterisk /etc/asterisk/sip.conf
+sudo chown asterisk /etc/asterisk/voicemail.conf
+```
+所有者が元に戻ったか確認する
+```
+ls -l /etc/asterisk
 
-
-#所有者を戻す
-root@rp3b-01:/etc/asterisk# chown asterisk asterisk.conf
-root@rp3b-01:/etc/asterisk# chown asterisk extensions.conf
-root@rp3b-01:/etc/asterisk# chown asterisk sip.conf
-root@rp3b-01:/etc/asterisk# chown asterisk voicemail.conf
-
-
-
-#所有者が元に戻ったか確認する
-pi@rp3b-01:/etc/asterisk $ ls -l
 合計 xx
 ~
 -rw-r--r-- 1 asterisk asterisk 707  1月  9 11:01 asterisk.conf
@@ -373,27 +371,25 @@ pi@rp3b-01:/etc/asterisk $ ls -l
 -rw-r--r-- 1 asterisk asterisk 707  1月  9 11:01 sip.conf
 -rw-r--r-- 1 asterisk asterisk 707  1月  9 11:01 voicemail.conf
 ~
+```
+**最後にAsteriskを再起動**  
+`sudo service asterisk restart`  
+##  
+&nbsp;  
 
+# 動作確認
+**留守電を吹き込んでメール転送されているか。**  
+##  
+&nbsp;  
+##  
+&nbsp;  
 
+# 録音メッセージの削除
+```
+メッセージの保管場所
+ls /var/spool/asterisk/voicemail/default/500/INBOX      ;asterisk.conf内のastspooldirのディレクトリ配下の/voicemail/default/受信箱番号/INBOX。
+  msg0000.WAV  msg0000.txt                              ;録音されたメッセージの実態ファイル。
+sudo rm *                                               ;メッセージ全削除
+ls
+                                                        ;何も表示されない(空になった)ことを確認する
 
-#最後にAsteriskを再起動
-root@rp3b-01:/etc/asterisk# service asterisk restart
-
-
-
-#動作確認
-留守電を吹き込んでメール転送されているか。
-
-
-
-#録音メッセージの削除
-##保存先はasterisk.confの[directories](!)astspooldir => のディレクトリ配下の/voicemail/default/受信箱番号/INBOX
-root@rp3b-01:/var/spool/asterisk/voicemail/default/500/INBOX# ls
-msg0000.WAV  msg0000.txt
-root@rp3b-01:/var/spool/asterisk/voicemail/default/500/INBOX# rm *      ;メッセージ全削除
-root@rp3b-01:/var/spool/asterisk/voicemail/default/500/INBOX# ls
-root@rp3b-01:/var/spool/asterisk/voicemail/default/500/INBOX# 
-
-
-
-#tech
