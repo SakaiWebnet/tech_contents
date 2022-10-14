@@ -232,7 +232,7 @@ Status: inactive            # このように出力されればOK
 FWを通過させるサービスの登録
 ```
 sudo ufw default deny                                     # まずは一旦全拒否
-sudo ufw allow port 22                                    # SSH許可(必須!) これで接続確認してから下記の限定許可設定を行う。最終的には削除。
+sudo ufw allow port 22                                    # SSH許可(必須!) これで接続確認してから下記の限定許可設定を行う。これは最終的に削除。
 (sudo ufw allow from 192.168.1.0/24 to any port 22        # SSH許可(必須!))
 sudo ufw allow from 192.168.1.0/24 to any port 137        # samba許可
 sudo ufw allow from 192.168.1.0/24 to any port 138        # samba許可
@@ -447,6 +447,7 @@ sudo ufw route allow from 192.168.42.0/24 to 192.168.1.0/24
 sudo ufw route allow from 192.168.1.0/24 to 192.168.42.0/24
 sudo ufw allow from 192.168.42.0/24 to any port 22          # SSH許可
 sudo ufw allow from 192.168.42.0/24 to any port 80          # web(camera/LED)許可
+sudo ufw allow from 192.168.42.0/24 to any port 5900        # VNC許可
 sudo ufw reload
 sudo ufw status
 sudo ufw status numbered
