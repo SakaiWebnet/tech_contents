@@ -1,0 +1,151 @@
+{
+    "root": {
+        "data": {
+            "id": "cow0k3pq6js0",
+            "created": 1670459742651,
+            "text": "手を動かす",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cow0kgbgjkw0",
+                    "created": 1670459770086,
+                    "text": "感じる"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cow0rq8nyeg0",
+                            "created": 1670460340234,
+                            "text": "できなかったことができるようになった。"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cow0r92os8g0",
+                                    "created": 1670460302868,
+                                    "text": "達成感"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cow0t298d280",
+                    "created": 1670460444754,
+                    "text": "受動的から能動的になる瞬間"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cow0llzb8lc0",
+                            "created": 1670459860777,
+                            "text": "自分の力で楽しみを生み出すことができた"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cow25hzzwgw0",
+                    "created": 1670464240504,
+                    "text": "受動的が苦手。能動的でありたい。"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cow2ygn3w800",
+                            "created": 1670466510109,
+                            "text": "こちらの意思と関係なく入ってくることにはネガティブな感情を持つ"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cow0m6zygk80",
+                    "created": 1670459906528,
+                    "text": "支配欲"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cow0nry0aps0",
+                    "created": 1670460030487,
+                    "text": "得たい",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cow0ncu3jwg0",
+                            "created": 1670459997599,
+                            "text": "与える"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cow9dwwwpps0",
+                                    "created": 1670484647652,
+                                    "text": "お金"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cow9e2uddlk0",
+                                    "created": 1670484660559,
+                                    "text": "食べ物"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cow9e7ttruo0",
+                                    "created": 1670484671410,
+                                    "text": "情報"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cow0n7in3340",
+                            "created": 1670459986022,
+                            "text": "作る"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cow9edxd87c0",
+                                    "created": 1670484684685,
+                                    "text": "プログラミング"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cow9ej7llhs0",
+                                    "created": 1670484696187,
+                                    "text": "３Dプリンター"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

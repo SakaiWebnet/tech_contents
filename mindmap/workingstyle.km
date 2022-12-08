@@ -1,0 +1,304 @@
+{
+    "root": {
+        "data": {
+            "id": "covbfm29yqo0",
+            "created": 1670388863024,
+            "text": "ワーキングスタイル",
+            "font-family": "Ricty Diminished"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "covblc7ckns0",
+                    "created": 1670389311747,
+                    "text": "場所",
+                    "layout_mind_offset": {
+                        "x": -19.749999944120646,
+                        "y": -150.75000039115548
+                    },
+                    "expandState": "expand",
+                    "font-family": "sans-serif"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "covbl7hb0340",
+                            "created": 1670389301465,
+                            "text": "公共交通機関"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "covchcrgvmo0",
+                            "created": 1670391820617,
+                            "text": "カフェ"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "covbkui4d200",
+                            "created": 1670389273216,
+                            "text": "家",
+                            "layout_left_offset": {
+                                "x": -4,
+                                "y": -96
+                            }
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "covbkn1kfjk0",
+                            "created": 1670389256978,
+                            "text": "事務所"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "covbnfiwkds0",
+                    "created": 1670389475705,
+                    "text": "費用",
+                    "layout_mind_offset": {
+                        "x": -54,
+                        "y": -58
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "covbnmizzr40",
+                            "created": 1670389490948,
+                            "text": "有料"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "covcgj1odwg0",
+                                    "created": 1670391755931,
+                                    "text": "事務所",
+                                    "layout_right_offset": {
+                                        "x": 0,
+                                        "y": -39.99999940395355
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "covcgo1f6uw0",
+                                            "created": 1670391766799,
+                                            "text": "賃料"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "covcgs5x9zs0",
+                                            "created": 1670391775779,
+                                            "text": "交通費"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "covch5byqn40",
+                                    "created": 1670391804442,
+                                    "text": "公共交通機関"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "covdji7z5zc0",
+                                            "created": 1670394810337,
+                                            "text": "交通費"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "covdjqs7jm80",
+                                    "created": 1670394828975,
+                                    "text": "カフェ",
+                                    "layout_right_offset": {
+                                        "x": 7.2499999813735485,
+                                        "y": 36.999999627471084
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "covdjuiikcw0",
+                                            "created": 1670394837096,
+                                            "text": "交通費"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "covdk1345w00",
+                                            "created": 1670394851402,
+                                            "text": "飲食費"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "covbnr8yl800",
+                            "created": 1670389501225,
+                            "text": "無料",
+                            "font-family": "sans-serif",
+                            "layout_right_offset": {
+                                "x": 14.999999776482582,
+                                "y": 93.7499986030162
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "covdkgvkov40",
+                                    "created": 1670394885775,
+                                    "text": "家"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "covbw7ervts0",
+                    "created": 1670390163318,
+                    "text": "メンタル",
+                    "layout_mind_offset": {
+                        "x": 132,
+                        "y": -70
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "covc1xshid40",
+                            "created": 1670390612564,
+                            "text": "リラックス",
+                            "layout_left_offset": {
+                                "x": -3.7499999441206455,
+                                "y": -73.74999890103936
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "covdkp01qlc0",
+                                    "created": 1670394903459,
+                                    "text": "家"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "covdl2j05yg0",
+                                    "created": 1670394932904,
+                                    "text": "事務所"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "covc22ridxc0",
+                            "created": 1670390623389,
+                            "text": "プレッシャー"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "covdl9qyiz40",
+                                    "created": 1670394948622,
+                                    "text": "公共交通機関"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "covg0etz50g0",
+                                            "created": 1670401777371,
+                                            "text": "電車の中でPC操作はできない"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "covg11vubvk0",
+                                            "created": 1670401827550,
+                                            "text": "待合室やベンチでの長時間滞在は難しい"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "covdlddyz9c0",
+                                    "created": 1670394956544,
+                                    "text": "カフェ"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "covfzra60kg0",
+                                            "created": 1670401726107,
+                                            "text": "長時間の滞在は禁止となっている"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "covfxbmty140",
+                                    "created": 1670401535316,
+                                    "text": "家"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "covfz682bdk0",
+                                            "created": 1670401680268,
+                                            "text": "隣近所の目・ずっと年がら年中いるとおかしく思われる"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cow02y0g8iw0",
+                            "created": 1670458398048,
+                            "text": "他人の目"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

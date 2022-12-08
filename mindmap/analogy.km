@@ -1,0 +1,64 @@
+{
+    "root": {
+        "data": {
+            "id": "cow1w3sjd3k0",
+            "created": 1670463504301,
+            "text": "Analogy"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cow1ztgzjgo0",
+                    "created": 1670463795291,
+                    "text": "できている・身についていると評価された時"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cow1yx5kpuw0",
+                            "created": 1670463724944,
+                            "text": "理解したと感じていない"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cow2881m3r40",
+                                    "created": 1670464453927,
+                                    "text": "自己肯定感が低い"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cow20y5iffk0",
+                            "created": 1670463883845,
+                            "text": "その瞬間は実感がない"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cow2kapsqpk0",
+                            "created": 1670465400112,
+                            "text": "量をこなしている"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cow2hgh2xg80",
+                    "created": 1670465177554,
+                    "text": "謎かけ"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
